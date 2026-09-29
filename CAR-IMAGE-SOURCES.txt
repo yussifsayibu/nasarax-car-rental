@@ -1,0 +1,21 @@
+NasaraX vehicle image sources
+
+The high-resolution remote vehicle imagery used by the demo is sourced from free-to-use Unsplash photos. The project keeps local fallback images inside assets/ for resilience.
+
+Range Rover / SUV reference
+https://unsplash.com/photos/a-shiny-black-suv-is-highlighted-hbQgmSJpJY0
+
+BMW X7 reference
+https://unsplash.com/photos/a-black-bmw-suv-parked-on-top-of-a-lush-green-field-1628Kj8uUVY
+
+Mercedes S-Class reference
+https://unsplash.com/photos/a-black-mercedes-benz-s-class-sedan-driving-on-road--J3tzK3FPxQ
+
+Cadillac Escalade reference
+https://unsplash.com/photos/a-black-cadillac-escalade-parked-in-a-lot-n63ftj6LrEY
+
+Honda CR-V reference
+https://unsplash.com/photos/a-gray-honda-crv-is-parked-on-a-road-RTkoaVWD0lE
+
+Toyota RAV4 reference search
+https://unsplash.com/s/photos/toyota-rav4

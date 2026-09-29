@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0b0d10">
+    <title>NasaraX | Drive differently</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+
+    <header class="site-header" id="site-header">
+        <div class="shell nav-shell">
+            <a class="brand" href="#/" aria-label="NasaraX home">
+                <span class="brand-logo" aria-label="NasaraX"><img class="logo-dark" src="assets/nasarax-logo-dark.png" alt="NasaraX"><img class="logo-light" src="assets/nasarax-logo-light.png" alt="NasaraX"></span>
+            </a>
+
+            <nav class="main-nav" aria-label="Main navigation">
+                <a href="#/" data-nav="home">Home</a>
+                <a href="#/vehicles" data-nav="vehicles">Fleet</a>
+                <a href="#/services" data-nav="services">Services</a>
+                <a href="#/about" data-nav="about">About</a>
+                <a href="#/faq" data-nav="faq">FAQ</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="icon-button" id="theme-toggle" type="button" aria-label="Toggle theme">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <a class="nav-login" href="#/login" id="login-link">Sign in</a>
+                <a class="button button-small" href="#/vehicles">Explore fleet <i class="fa-solid fa-arrow-right"></i></a>
+                <button class="menu-toggle icon-button" id="menu-toggle" type="button" aria-label="Open navigation">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main id="public-app">
+        <div class="page" data-page="home">
+            <section class="hero shell">
+                <div class="hero-copy">
+                    <div class="eyebrow"><span></span> Premium mobility, without the friction</div>
+                    <h1>Move like the<br><em>destination</em> matters.</h1>
+                    <p>Premium cars, transparent hourly pricing and a booking experience designed around your time.</p>
+                    <div class="hero-actions">
+                        <a class="button" href="#/vehicles">Browse the fleet <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        <a class="text-link" href="#/services">How it works <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="hero-ambient-ring hero-ring-one"></div>
+                    <div class="hero-ambient-ring hero-ring-two"></div>
+                    <div class="hero-image-frame">
+                        <div class="hero-image-glow"></div>
+                        <img src="assets/Range Rover Sport.webp" alt="Range Rover Sport" class="hero-car">
+                        <div class="hero-image-shade"></div>
+                        <div class="hero-meta"><span>01</span><small>Signature fleet</small></div>
+                        <div class="hero-image-label"><i class="fa-solid fa-location-dot"></i> Kumasi · Available now</div>
+                    </div>
+                    <div class="hero-card">
+                        <div>
+                            <span class="mini-label">Featured today</span>
+                            <strong>Range Rover Sport</strong>
+                        </div>
+                        <div class="hero-price"><strong>GH₵60</strong><span>/ hour</span></div>
+                    </div>
+                    <div class="hero-badge"><i class="fa-solid fa-shield-halved"></i><span>Verified<br>fleet</span></div>
+                </div>
+            </section>
+
+            <section class="quick-book shell">
+                <div class="quick-heading">
+                    <span class="section-kicker">01 / Start here</span>
+                    <h2>Find your next drive.</h2>
+                </div>
+                <form id="quick-search" class="search-panel">
+                    <label>
+                        <span><i class="fa-solid fa-location-dot"></i> Pickup</span>
+                        <select id="quick-location">
+                            <option>Kumasi</option>
+                            <option>Accra</option>
+                            <option>Kotoka Airport</option>
+                            <option>East Legon</option>
+                        </select>
+                    </label>
+                    <label>
+                        <span><i class="fa-regular fa-calendar"></i> Date</span>
+                        <input type="date" id="quick-date">
+                    </label>
+                    <label>
+                        <span><i class="fa-regular fa-clock"></i> Duration</span>
+                        <select id="quick-duration">
+                            <option value="4">4 hours</option>
+                            <option value="8">8 hours</option>
+                            <option value="12">12 hours</option>
+                            <option value="24">24 hours</option>
+                        </select>
+                    </label>
+                    <button class="button" type="submit">Show available cars <i class="fa-solid fa-arrow-right"></i></button>
+                </form>
+            </section>
+
+            <section class="shell section-block">
+                <div class="section-head">
+                    <div>
+                        <span class="section-kicker">02 / The fleet</span>
+                        <h2>Cars with a point of view.</h2>
+                    </div>
+                    <a class="text-link" href="#/vehicles">View all cars <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="fleet-grid" id="home-fleet"></div>
+            </section>
+
+            <section class="shell story-section">
+                <div class="story-card">
+                    <div class="story-content">
+                        <span class="section-kicker">03 / The NasaraX standard</span>
+                        <h2>Luxury should feel<br><em>effortless.</em></h2>
+                        <p>We removed the noise from traditional car rental: no confusing packages, no hidden steps, no dated forms. Just a clear way to get behind the wheel.</p>
+                        <a class="button button-dark" href="#/about">Our approach <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    <div class="story-stat">
+                        <span>20K+</span>
+                        <small>journeys shaped around our customers</small>
+                    </div>
+                </div>
+            </section>
+
+            <section class="shell process-section">
+                <div class="section-head">
+                    <div>
+                        <span class="section-kicker">04 / Simple by design</span>
+                        <h2>Four moves. Zero friction.</h2>
+                    </div>
+                </div>
+                <div class="process-grid">
+                    <article><span>01</span><i class="fa-solid fa-magnifying-glass"></i><h3>Choose</h3><p>Pick the vehicle that matches your trip, mood or moment.</p></article>
+                    <article><span>02</span><i class="fa-regular fa-calendar-check"></i><h3>Reserve</h3><p>Set your hours, pickup point and preferences in one clean flow.</p></article>
+                    <article><span>03</span><i class="fa-solid fa-key"></i><h3>Collect</h3><p>Meet the team, complete a quick handover and take the keys.</p></article>
+                    <article><span>04</span><i class="fa-solid fa-road"></i><h3>Go</h3><p>Enjoy the drive with support available whenever you need it.</p></article>
+                </div>
+            </section>
+
+            <section class="shell cta-section">
+                <div>
+                    <span class="section-kicker">05 / Ready when you are</span>
+                    <h2>Make the next journey<br><em>feel different.</em></h2>
+                </div>
+                <a class="button button-light" href="#/vehicles">Explore the fleet <i class="fa-solid fa-arrow-right"></i></a>
+            </section>
+        </div>
+
+        <div class="page shell page-inner" data-page="vehicles">
+            <div class="page-title">
+                <div><span class="section-kicker">Fleet / 2026</span><h1>Choose your<br><em>machine.</em></h1></div>
+                <p>Curated vehicles for city runs, long-distance trips, business travel and the moments that deserve something extra.</p>
+            </div>
+            <div class="toolbar">
+                <div class="filter-tabs" id="fleet-filters"></div>
+                <label class="search-field"><i class="fa-solid fa-magnifying-glass"></i><input id="fleet-search" type="search" placeholder="Search the fleet"></label>
+            </div>
+            <div class="fleet-availability-legend" aria-label="Vehicle availability legend">
+                <span><i class="fa-solid fa-circle"></i> Available now</span>
+                <span><i class="fa-solid fa-circle"></i> Currently unavailable</span>
+                <small>Availability is simulated for this demo.</small>
+            </div>
+            <div class="fleet-grid fleet-page-grid" id="fleet-grid"></div>
+        </div>
+
+        <div class="page shell page-inner" data-page="services">
+            <div class="page-title"><div><span class="section-kicker">Services / Built around the trip</span><h1>More than<br><em>a rental.</em></h1></div><p>Choose the level of support your journey needs. Every service is designed to feel simple, personal and precise.</p></div>
+            <div class="service-intro">
+                <div class="service-intro-main">
+                    <span class="section-kicker">One platform / multiple ways to move</span>
+                    <h2>Designed around <em>why</em> you are travelling.</h2>
+                </div>
+                <p>From a two-hour meeting to a weekend outside the city, NasaraX keeps the vehicle, timing and support in one clear experience.</p>
+            </div>
+            <div class="service-grid">
+                <article class="service-card service-featured">
+                    <div class="service-card-top"><span>01</span><i class="fa-solid fa-briefcase"></i></div>
+                    <div class="service-featured-content"><span class="service-label">For work</span><h2>Business mobility</h2><p>Premium vehicles with flexible hourly rental for meetings, airport transfers and full-day schedules. Keep the day moving without rebuilding the plan around the car.</p><a href="#/vehicles">Explore business-ready cars <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
+                    <div class="service-metric"><strong>01</strong><span>vehicle, timing<br>and pickup in one flow</span></div>
+                </article>
+                <article class="service-card service-compact">
+                    <div class="service-card-top"><span>02</span><i class="fa-solid fa-route"></i></div>
+                    <div><span class="service-label">For distance</span><h2>Intercity trips</h2><p>Comfortable long-distance rentals for Accra, Kumasi and beyond, with clear pricing and practical options.</p></div>
+                    <a href="#/vehicles" class="service-link">Plan a trip <i class="fa-solid fa-arrow-right"></i></a>
+                </article>
+                <article class="service-card service-compact">
+                    <div class="service-card-top"><span>03</span><i class="fa-solid fa-champagne-glasses"></i></div>
+                    <div><span class="service-label">For the moment</span><h2>Events & occasions</h2><p>Make weddings, celebrations and important weekends feel a little more considered with a vehicle that fits the occasion.</p></div>
+                    <a href="#/vehicles" class="service-link">View premium fleet <i class="fa-solid fa-arrow-right"></i></a>
+                </article>
+                <article class="service-card service-wide">
+                    <div class="service-card-top"><span>04</span><i class="fa-solid fa-user-tie"></i></div>
+                    <div><span class="service-label">When you want it handled</span><h2>Chauffeur support</h2><p>Need the drive handled? Tell us where you are going, when you need to move and what level of support you expect. We arrange the details around you.</p></div>
+                    <a href="#/login" class="service-link">Request support <i class="fa-solid fa-arrow-right"></i></a>
+                </article>
+            </div>
+            <div class="service-note"><i class="fa-solid fa-sparkles"></i><div><strong>One consistent experience</strong><span>Every service uses the same booking flow, clear pricing and client workspace.</span></div><a href="#/vehicles">Start with the fleet <i class="fa-solid fa-arrow-right"></i></a></div>
+        </div>
+
+        <div class="page shell page-inner" data-page="about">
+            <div class="about-hero"><span class="section-kicker">About / NasaraX</span><h1>Designed for people<br>who <em>keep moving.</em></h1><p>NasaraX is a modern mobility concept built around a simple belief: renting a premium car should be as effortless as using one.</p></div>
+            <div class="about-grid"><div class="about-number">20K<small>+</small><span>customer journeys</span></div><div><span class="section-kicker">Our philosophy</span><h2>Less paperwork.<br>More road.</h2><p>From the first tap to the final handover, every part of the experience is deliberately simple. Clear pricing. Curated vehicles. Human support.</p></div></div>
+            <div class="values-grid"><article><i class="fa-solid fa-eye"></i><h3>Clarity</h3><p>Everything important is visible before you commit.</p></article><article><i class="fa-solid fa-sparkles"></i><h3>Care</h3><p>Vehicles and handovers are treated as part of the experience.</p></article><article><i class="fa-solid fa-bolt"></i><h3>Momentum</h3><p>Technology removes steps so your plans keep moving.</p></article></div>
+        </div>
+
+        <div class="page shell page-inner" data-page="faq">
+            <div class="page-title"><div><span class="section-kicker">FAQ / Answers</span><h1>Good questions<br>deserve <em>clear answers.</em></h1></div></div>
+            <div class="faq-list">
+                <details><summary>Which payment methods do you accept?<i class="fa-solid fa-plus"></i></summary><p>This front-end demo does not process real payments. A production version can connect to your preferred payment provider.</p></details>
+                <details><summary>Is there a mileage limit?<i class="fa-solid fa-plus"></i></summary><p>Most rentals in the concept include unlimited mileage. Individual vehicles can have their own terms shown before booking.</p></details>
+                <details><summary>Can I travel between cities?<i class="fa-solid fa-plus"></i></summary><p>Yes. Intercity travel can be requested during booking, with any additional requirements confirmed by the team.</p></details>
+                <details><summary>Can I make a special request?<i class="fa-solid fa-plus"></i></summary><p>Yes. Add a note during reservation or use the special request form in the client area.</p></details>
+                <details><summary>Is this a real booking platform?<i class="fa-solid fa-plus"></i></summary><p>This portfolio version is a front-end demo. Login and booking actions are simulated locally and do not create real reservations.</p></details>
+            </div>
+        </div>
+
+        <div class="page shell page-inner" data-page="case-study">
+            <div class="page-title"><div><span class="section-kicker">Case study / UI direction</span><h1>From rental website<br>to <em>mobility product.</em></h1></div><p>A visual and UX direction focused on clearer hierarchy, faster booking and a stronger premium identity.</p></div>
+            <div class="case-grid"><div><span>Problem</span><h3>Too much interface, not enough direction.</h3><p>The original experience relied heavily on boxes, small type and a conventional rental-site structure.</p></div><div><span>Direction</span><h3>A calmer, more editorial interface.</h3><p>Large type, controlled contrast, strong imagery and focused actions create a more current product feel.</p></div><div><span>System</span><h3>One visual language across every state.</h3><p>Public pages, client dashboard and booking flow share the same spacing, typography, states and interaction patterns.</p></div><div><span>Outcome</span><h3>Fewer decisions per screen.</h3><p>The redesign turns browsing and booking into a guided journey rather than a collection of forms.</p></div></div>
+            <section class="case-comparison" aria-labelledby="comparison-title">
+                <div class="comparison-heading">
+                    <div><span class="section-kicker">Visual comparison</span><h2 id="comparison-title">Before. After. <em>More intentional.</em></h2></div>
+                    <div class="comparison-switch" role="tablist" aria-label="Case study comparison">
+                        <button class="comparison-tab is-active" type="button" data-comparison="both" role="tab" aria-selected="true">Before &amp; after</button>
+                        <button class="comparison-tab" type="button" data-comparison="before" role="tab" aria-selected="false">Before</button>
+                        <button class="comparison-tab" type="button" data-comparison="after" role="tab" aria-selected="false">After</button>
+                    </div>
+                </div>
+                <div class="comparison-grid" id="comparison-grid">
+                    <article class="comparison-card comparison-before" data-comparison-card="before">
+                        <div class="comparison-label"><span>01</span><strong>Original experience</strong><small>Before redesign</small></div>
+                        <div class="comparison-image"><img src="assets/case-study/before-redesign.png" alt="NasaraX original experience before the redesign"></div>
+                        <div class="comparison-notes"><span><i class="fa-solid fa-layer-group"></i> Dense hierarchy</span><span><i class="fa-solid fa-border-all"></i> Conventional blocks</span><span><i class="fa-solid fa-text-height"></i> Smaller type</span></div>
+                    </article>
+                    <article class="comparison-card comparison-after" data-comparison-card="after">
+                        <div class="comparison-label"><span>02</span><strong>NasaraX redesign</strong><small>After redesign</small></div>
+                        <div class="comparison-image"><img src="assets/case-study/after-redesign.png" alt="NasaraX redesigned experience after the redesign"></div>
+                        <div class="comparison-notes"><span><i class="fa-solid fa-bullseye"></i> Clear hierarchy</span><span><i class="fa-solid fa-wand-magic-sparkles"></i> Editorial direction</span><span><i class="fa-solid fa-mobile-screen-button"></i> Responsive system</span></div>
+                    </article>
+                </div>
+                <div class="comparison-caption"><i class="fa-solid fa-arrows-left-right"></i><p>The comparison is part of the case study so visitors can see the design change instead of only reading about it.</p></div>
+            </section>
+        </div>
+
+        <div class="page shell auth-page" data-page="login">
+            <div class="auth-layout">
+                <div class="auth-showcase"><a class="brand brand-light" href="#/" aria-label="Return to NasaraX home"><span class="brand-logo"><img class="logo-dark" src="assets/nasarax-logo-dark.png" alt="NasaraX"><img class="logo-light" src="assets/nasarax-logo-light.png" alt="NasaraX"></span></a><div><span class="section-kicker">Client access</span><h1>Your next drive<br>starts <em>here.</em></h1><p>Manage reservations, save your details and get back on the road faster.</p></div><div class="showcase-bottom"><span><i class="fa-solid fa-circle-check"></i> Demo environment</span><span>© 2026 NasaraX</span><span>Yussif Sayibu</span></div></div>
+                <form class="auth-form" id="login-form">
+                    <div class="form-heading"><span class="section-kicker">Welcome back</span><h2>Sign in</h2><p>Use any email and password to enter this demo.</p></div>
+                    <div class="demo-notice"><i class="fa-solid fa-flask"></i><div><strong>Demo mode is active</strong><p>This is a portfolio demo. Any valid-looking email and password will log you in. No account is created.</p></div></div>
+                    <label>Email address<input id="login-email" type="email" placeholder="you@example.com" required></label>
+                    <label>Password<div class="password-field"><input id="login-password" type="password" placeholder="Enter any password" required><button type="button" id="password-toggle" aria-label="Show password"><i class="fa-regular fa-eye"></i></button></div></label>
+                    <button class="button button-full" type="submit">Enter demo <i class="fa-solid fa-arrow-right"></i></button>
+                    <p class="auth-switch">New to NasaraX? <a href="#/signup">Create a demo profile</a></p>
+                </form>
+            </div>
+        </div>
+
+        <div class="page shell auth-page" data-page="signup">
+            <div class="auth-layout">
+                <div class="auth-showcase"><a class="brand brand-light" href="#/" aria-label="Return to NasaraX home"><span class="brand-logo"><img class="logo-dark" src="assets/nasarax-logo-dark.png" alt="NasaraX"><img class="logo-light" src="assets/nasarax-logo-light.png" alt="NasaraX"></span></a><div><span class="section-kicker">Demo profile</span><h1>Make the next trip<br>feel <em>yours.</em></h1><p>Create a simulated client profile to explore the dashboard experience.</p></div><div class="showcase-bottom"><span><i class="fa-solid fa-flask"></i> Demo environment</span><span>© 2026 NasaraX</span><span>Yussif Sayibu</span></div></div>
+                <form class="auth-form" id="signup-form">
+                    <div class="form-heading"><span class="section-kicker">Get started</span><h2>Create profile</h2><p>No real account is created in this demo.</p></div>
+                    <label>Full name<input id="signup-name" required placeholder="Ama Mensah"></label>
+                    <label>Email address<input id="signup-email" type="email" required placeholder="you@example.com"></label>
+                    <label>Password<input id="signup-password" type="password" required minlength="4" placeholder="Any password"></label>
+                    <button class="button button-full" type="submit">Create demo profile <i class="fa-solid fa-arrow-right"></i></button>
+                    <p class="auth-switch">Already have a demo profile? <a href="#/login">Sign in</a></p>
+                </form>
+            </div>
+        </div>
+
+        <footer class="site-footer shell">
+            <a class="brand" href="#/"><span class="brand-logo" aria-label="NasaraX"><img class="logo-dark" src="assets/nasarax-logo-dark.png" alt="NasaraX"><img class="logo-light" src="assets/nasarax-logo-light.png" alt="NasaraX"></span></a>
+            <span>Premium mobility, reimagined.</span>
+            <span class="creator-credit">Concept &amp; build by <a href="https://yussif-sayibu-portfolio.vercel.app/" target="_blank" rel="noopener noreferrer"><strong>Yussif Sayibu</strong></a></span>
+            <a href="#/case-study">View case study <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            <span>© 2026 NasaraX</span>
+        </footer>
+    </main>
+
+    <main id="client-app" class="dashboard-shell">
+        <div class="dashboard">
+            <aside class="dashboard-sidebar">
+                <a class="brand" href="#/"><span class="brand-logo" aria-label="NasaraX"><img class="logo-dark" src="assets/nasarax-logo-dark.png" alt="NasaraX"><img class="logo-light" src="assets/nasarax-logo-light.png" alt="NasaraX"></span></a>
+                <div class="side-label">Workspace</div>
+                <nav>
+                    <a href="#/" data-client-tab="overview"><i class="fa-solid fa-grid-2"></i><span>Overview</span></a>
+                    <a href="#/browse" data-client-tab="browse"><i class="fa-solid fa-car-side"></i><span>Browse fleet</span></a>
+                    <a href="#/bookings" data-client-tab="bookings"><i class="fa-regular fa-calendar"></i><span>My bookings</span></a>
+                    <a href="#/profile" data-client-tab="profile"><i class="fa-regular fa-user"></i><span>Profile</span></a>
+                </nav>
+                <div class="sidebar-bottom"><div class="mini-user" id="sidebar-user"></div><a href="#/logout" id="logout-link"><i class="fa-solid fa-arrow-right-from-bracket"></i> Sign out</a></div>
+            </aside>
+            <section class="dashboard-main">
+                <div class="dashboard-topbar"><div><span class="section-kicker">Client workspace</span><h2 id="dashboard-title">Good evening.</h2></div><button class="button button-small" data-book><i class="fa-solid fa-plus"></i> Book a car</button></div>
+                <div class="client-panel" id="client-overview">
+                    <div class="stats-row"><article><span>Upcoming</span><strong id="stat-upcoming">1</strong><small>active reservation</small></article><article><span>Trips completed</span><strong>12</strong><small>since joining</small></article><article><span>Total spent</span><strong>GH₵4.8k</strong><small>across your trips</small></article></div>
+                    <div class="dashboard-section"><div class="section-head"><div><span class="section-kicker">Next trip</span><h3>Ready when you are.</h3></div></div><div id="next-booking"></div></div>
+                    <div class="dashboard-section"><div class="section-head"><div><span class="section-kicker">Book again</span><h3>Your recent picks.</h3></div><a href="#/vehicles" class="text-link">See fleet <i class="fa-solid fa-arrow-right"></i></a></div><div class="fleet-grid" id="client-fleet"></div></div>
+                </div>
+                <div class="client-panel hidden-panel" id="client-bookings"><div class="section-head"><div><span class="section-kicker">Reservations</span><h2>My bookings</h2></div></div><div id="booking-list"></div></div>
+                <div class="client-panel hidden-panel" id="client-profile"><div class="section-head"><div><span class="section-kicker">Account</span><h2>Your profile</h2></div></div><form class="profile-card" id="profile-form"><div class="profile-avatar" id="profile-avatar">YS</div><div class="profile-fields"><label>Full name<input id="profile-name" required></label><label>Email<input id="profile-email" type="email" required></label><label>Phone<input id="profile-phone" placeholder="024 000 0000"></label><label>Default pickup<div class="booking-select-wrap profile-pickup-wrap"><i class="fa-solid fa-location-dot"></i><select id="profile-pickup" aria-label="Default pickup station"></select></div></label><button class="button" type="submit">Save changes <i class="fa-solid fa-check"></i></button></div></form></div>
+                <div class="client-panel hidden-panel" id="client-browse"><div class="section-head"><div><span class="section-kicker">Fleet</span><h2>Browse cars</h2></div></div><div class="fleet-grid" id="client-browse-grid"></div></div>
+            </section>
+        </div>
+    </main>
+
+    <main id="admin-app" class="dashboard-shell">
+        <div class="dashboard">
+            <aside class="dashboard-sidebar admin-sidebar">
+                <a class="brand" href="#/admin/login"><span class="brand-logo" aria-label="NasaraX"><img class="logo-dark" src="assets/nasarax-logo-dark.png" alt="NasaraX"><img class="logo-light" src="assets/nasarax-logo-light.png" alt="NasaraX"></span></a>
+                <div class="side-label">Admin workspace</div>
+                <nav><button data-admin-tab="overview"><i class="fa-solid fa-chart-line"></i><span>Overview</span></button><button data-admin-tab="bookings"><i class="fa-regular fa-calendar-check"></i><span>Bookings</span></button><button data-admin-tab="vehicles"><i class="fa-solid fa-car"></i><span>Vehicles</span></button><button data-admin-tab="profile"><i class="fa-regular fa-user"></i><span>Profile</span></button></nav>
+                <div class="sidebar-bottom"><a href="#/"><i class="fa-solid fa-arrow-left"></i> View site</a></div>
+            </aside>
+            <section class="dashboard-main">
+                <div class="dashboard-topbar"><div><span class="section-kicker">Admin workspace</span><h2 id="admin-title">Fleet overview</h2></div><span class="admin-badge"><i class="fa-solid fa-flask"></i> Demo</span></div>
+                <div class="admin-panel" id="admin-overview">
+                    <div class="stats-row"><article><span>Total bookings</span><strong>24</strong><small>this month</small></article><article><span>Revenue</span><strong>GH₵12.8k</strong><small>simulated</small></article><article><span>Fleet</span><strong>6</strong><small>active vehicles</small></article></div>
+                    <div class="table-card"><div class="table-head"><div><span class="section-kicker">Recent activity</span><h3>Latest bookings</h3></div></div><div id="admin-bookings-table"></div></div>
+                </div>
+                <div class="admin-panel hidden-panel" id="admin-bookings"><div class="table-card"><div class="table-head"><h3>Bookings</h3></div><div id="admin-bookings-full"></div></div></div>
+                <div class="admin-panel hidden-panel" id="admin-vehicles"><div class="fleet-grid" id="admin-fleet"></div></div>
+                <div class="admin-panel hidden-panel" id="admin-profile"><div class="profile-card"><div class="profile-avatar">NX</div><div><h3>NasaraX Admin</h3><p>admin@nasarax.demo</p><span class="admin-badge">Demo administrator</span></div></div></div>
+            </section>
+        </div>
+    </main>
+
+    <div class="booking-overlay" id="booking-overlay" aria-hidden="true">
+        <div class="booking-sheet">
+            <div class="sheet-head"><div><span class="section-kicker">Reservation</span><h2>Book your drive.</h2></div><button class="icon-button" id="close-booking" aria-label="Close"><i class="fa-solid fa-xmark"></i></button></div>
+            <form id="booking-form">
+                <label class="booking-car-picker">
+                    <span>Choose your car</span>
+                    <div class="booking-select-wrap"><i class="fa-solid fa-car-side"></i><select id="booking-car" aria-label="Choose your car"></select></div>
+                </label>
+                <div class="selected-car" id="selected-car"></div>
+                <div class="form-grid"><label>Full name<input id="booking-name" required></label><label>Phone<input id="booking-phone" required placeholder="024 000 0000"></label><label class="pickup-field"><span>Pickup station</span><div class="booking-select-wrap"><i class="fa-solid fa-location-dot"></i><select id="booking-location" aria-label="Choose pickup station"></select></div><small class="field-note">Choose a NasaraX pickup point by region.</small></label><label>Pickup date<input id="booking-date" type="date" required></label></div>
+                <div class="hours-control"><span>Rental duration</span><div><button type="button" id="hours-minus">−</button><strong id="hours-value">4</strong><button type="button" id="hours-plus">+</button></div></div>
+                <div class="price-summary"><span><b id="price-hours">4 hours</b> rental</span><strong id="price-total">GH₵252</strong></div>
+                <button class="button button-full" type="submit">Confirm demo booking <i class="fa-solid fa-arrow-right"></i></button>
+            </form>
+            <div class="booking-success hidden" id="booking-success"><div class="success-icon"><i class="fa-solid fa-check"></i></div><span class="section-kicker">Reservation confirmed</span><h2>You're booked.</h2><p>Your demo reservation is ready. Use the reference below to explore the client dashboard.</p><strong id="booking-code"></strong><a class="button" href="#/bookings">View my bookings <i class="fa-solid fa-arrow-right"></i></a></div>
+        </div>
+    </div>
+
+    <div class="toast" id="toast" role="status"></div>
+
+    <script src="index.js"></script>
+</body>
+</html>

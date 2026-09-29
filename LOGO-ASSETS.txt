@@ -1,0 +1,7 @@
+NasaraX logo assets
+
+nasarax-logo-dark.png
+Use on dark backgrounds. This is the white NasaraX wordmark with the gold X.
+
+nasarax-logo-light.png
+Use on light backgrounds. This is the dark NasaraX wordmark with the gold X.
